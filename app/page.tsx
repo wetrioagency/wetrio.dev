@@ -1,3 +1,4 @@
+import { ContactForm } from "@/components/ContactForm";
 import { Header } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
 
@@ -123,7 +124,7 @@ export default function Home() {
           className="max-w-4xl text-4xl font-medium leading-[1.1] tracking-tight md:text-6xl lg:text-7xl"
         >
           IT & SaaS products, built to{" "}
-          <em className="font-serif font-medium italic text-accent">ship.</em>
+          <em className="accent-italic text-accent">ship.</em>
         </Reveal>
         <Reveal
           as="p"
@@ -154,7 +155,7 @@ export default function Home() {
       <section id="build" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:px-8 md:py-32">
         <Reveal as="h2" className="text-3xl font-medium tracking-tight md:text-5xl">
           Products people{" "}
-          <em className="font-serif font-medium italic text-accent">use,</em>{" "}
+          <em className="accent-italic text-accent">use,</em>{" "}
           not just launch.
         </Reveal>
         <Reveal
@@ -170,7 +171,7 @@ export default function Home() {
             <Reveal
               key={item.title}
               delay={0.05 * i}
-              className="rounded-card border border-border bg-card p-8"
+              className="rounded-card border border-border bg-card p-8 transition-colors duration-300 hover:border-muted"
             >
               <h3 className="text-xl font-semibold tracking-tight">{item.title}</h3>
               <p className="mt-3 text-base leading-relaxed text-muted-foreground">
@@ -186,7 +187,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:px-8 md:py-32">
           <Reveal as="h2" className="text-3xl font-medium tracking-tight md:text-5xl">
             From first brief to{" "}
-            <em className="font-serif font-medium italic text-accent">
+            <em className="accent-italic text-accent">
               production.
             </em>
           </Reveal>
@@ -220,7 +221,7 @@ export default function Home() {
           <div>
             <Reveal as="h2" className="text-3xl font-medium tracking-tight md:text-5xl">
               Full cycle, under{" "}
-              <em className="font-serif font-medium italic text-accent">one</em>{" "}
+              <em className="accent-italic text-accent">one</em>{" "}
               roof.
             </Reveal>
             <Reveal
@@ -247,7 +248,7 @@ export default function Home() {
               <Reveal
                 key={name}
                 delay={0.06 * i}
-                className="flex items-center justify-between rounded-card border border-border bg-card px-6 py-5 text-base font-medium"
+                className="flex items-center justify-between rounded-card border border-border bg-card px-6 py-5 text-base font-medium transition-colors duration-300 hover:border-muted"
               >
                 <span>{name}</span>
                 <span className="text-accent">
@@ -264,7 +265,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 py-24 md:px-8 md:py-32">
           <Reveal as="h2" className="text-3xl font-medium tracking-tight md:text-5xl">
             Engineering with{" "}
-            <em className="font-serif font-medium italic text-accent">
+            <em className="accent-italic text-accent">
               editorial
             </em>{" "}
             discipline.
@@ -298,48 +299,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA / contact form */}
       <section id="contact" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:px-8 md:py-32">
-        <div className="rounded-card border border-border bg-card p-10 md:p-16">
-          <Reveal as="p" className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
-            Ready to start?
-          </Reveal>
-          <Reveal as="h2" delay={0.1} className="max-w-3xl text-3xl font-medium tracking-tight md:text-5xl">
-            Let&apos;s build the{" "}
-            <em className="font-serif font-medium italic text-accent">first</em>{" "}
-            version.
-          </Reveal>
-          <Reveal
-            as="p"
-            delay={0.2}
-            className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
-          >
-            Tell us about your product. We will tell you what the smallest
-            version worth building looks like — and when you can click it.
-          </Reveal>
-          <Reveal delay={0.3} className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="mailto:start@wetr.io"
-              className="rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90"
+        <div className="grid grid-cols-1 gap-12 rounded-card border border-border bg-card p-8 md:grid-cols-2 md:gap-16 md:p-12 lg:p-16">
+          {/* Left: pitch + direct contacts */}
+          <div className="flex flex-col">
+            <Reveal as="p" className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+              Ready to start?
+            </Reveal>
+            <Reveal as="h2" delay={0.1} className="text-3xl font-medium tracking-tight md:text-5xl">
+              Let&apos;s build the{" "}
+              <em className="accent-italic text-accent">first</em> version.
+            </Reveal>
+            <Reveal
+              as="p"
+              delay={0.2}
+              className="mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl"
             >
-              start@wetr.io
-            </a>
-            <a
-              href="https://t.me/wetr_io"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded-full border border-border px-7 py-3.5 text-sm font-medium transition-colors hover:border-muted"
-            >
-              Telegram <ArrowIcon />
-            </a>
-            <a
-              href="https://wa.me/48506782768"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 rounded-full border border-border px-7 py-3.5 text-sm font-medium transition-colors hover:border-muted"
-            >
-              WhatsApp <ArrowIcon />
-            </a>
+              Tell us about your product. We will tell you what the smallest
+              version worth building looks like — and when you can click it.
+            </Reveal>
+            <Reveal delay={0.3} className="mt-auto pt-10">
+              <p className="text-sm text-muted-foreground">Prefer a quick message?</p>
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <a
+                  href="mailto:start@wetr.io"
+                  className="rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-muted"
+                >
+                  start@wetr.io
+                </a>
+                <a
+                  href="https://t.me/wetr_io"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-muted"
+                >
+                  Telegram <ArrowIcon />
+                </a>
+                <a
+                  href="https://wa.me/48506782768"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 rounded-full border border-border px-5 py-2.5 text-sm font-medium transition-colors hover:border-muted"
+                >
+                  WhatsApp <ArrowIcon />
+                </a>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Right: form */}
+          <Reveal delay={0.2}>
+            <ContactForm />
           </Reveal>
         </div>
       </section>

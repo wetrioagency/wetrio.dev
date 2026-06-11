@@ -44,6 +44,17 @@ body {
   color: var(--accent-foreground);
 }
 
+/* Editorial serif accent word inside headlines. Georgia's x-height is smaller
+   than Inter's, so it reads too small and sits low at a matched font-size —
+   nudge size up and tighten tracking so it sits optically on the same line. */
+.accent-italic {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05em;
+  letter-spacing: -0.012em;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
