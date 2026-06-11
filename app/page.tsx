@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import { Reveal } from "@/components/Reveal";
 
 const BUILD = [
@@ -109,46 +110,17 @@ function ArrowIcon() {
 export default function Home() {
   return (
     <main>
-      {/* Nav */}
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-8">
-          <a href="#" className="text-sm font-semibold tracking-wide">
-            WeTrio<span className="text-accent"> Dev Lab</span>
-          </a>
-          <div className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-            <a href="#build" className="transition-colors hover:text-foreground">
-              What we build
-            </a>
-            <a href="#process" className="transition-colors hover:text-foreground">
-              How we work
-            </a>
-            <a href="#capabilities" className="transition-colors hover:text-foreground">
-              Capabilities
-            </a>
-            <a href="#contact" className="transition-colors hover:text-foreground">
-              Contact
-            </a>
-          </div>
-          <a
-            href="https://wetr.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            wetr.io <ArrowIcon />
-          </a>
-        </nav>
-      </header>
+      <Header />
 
       {/* Hero */}
-      <section className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pt-24 md:px-8">
+      <section className="mx-auto flex min-h-screen max-w-6xl flex-col justify-center px-6 pt-28 md:px-8">
         <Reveal as="p" className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-accent">
           WeTrio Development Lab
         </Reveal>
         <Reveal
           as="h1"
           delay={0.15}
-          className="max-w-4xl text-4xl font-medium leading-[1.1] md:text-6xl lg:text-7xl"
+          className="max-w-4xl text-4xl font-medium leading-[1.1] tracking-tight md:text-6xl lg:text-7xl"
         >
           IT & SaaS products, built to{" "}
           <em className="font-serif font-medium italic text-accent">ship.</em>
@@ -180,7 +152,7 @@ export default function Home() {
 
       {/* What we build */}
       <section id="build" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:px-8 md:py-32">
-        <Reveal as="h2" className="text-3xl font-medium md:text-5xl">
+        <Reveal as="h2" className="text-3xl font-medium tracking-tight md:text-5xl">
           Products people{" "}
           <em className="font-serif font-medium italic text-accent">use,</em>{" "}
           not just launch.
@@ -188,7 +160,7 @@ export default function Home() {
         <Reveal
           as="p"
           delay={0.1}
-          className="mt-6 max-w-2xl text-lg text-muted-foreground"
+          className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
         >
           We take on the work between an idea and a product nobody wants to
           turn off.
@@ -200,8 +172,8 @@ export default function Home() {
               delay={0.05 * i}
               className="rounded-card border border-border bg-card p-8"
             >
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              <h3 className="text-xl font-semibold tracking-tight">{item.title}</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
                 {item.description}
               </p>
             </Reveal>
@@ -212,7 +184,7 @@ export default function Home() {
       {/* Process */}
       <section id="process" className="border-y border-border bg-card/40">
         <div className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:px-8 md:py-32">
-          <Reveal as="h2" className="text-3xl font-medium md:text-5xl">
+          <Reveal as="h2" className="text-3xl font-medium tracking-tight md:text-5xl">
             From first brief to{" "}
             <em className="font-serif font-medium italic text-accent">
               production.
@@ -221,7 +193,7 @@ export default function Home() {
           <Reveal
             as="p"
             delay={0.1}
-            className="mt-6 max-w-2xl text-lg text-muted-foreground"
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
           >
             Short loops, live software, no hidden phases. Here is the whole
             process.
@@ -232,8 +204,8 @@ export default function Home() {
                 <span className="text-sm font-medium text-accent">
                   {item.step}
                 </span>
-                <h3 className="mt-4 text-lg font-semibold">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                <h3 className="mt-4 text-xl font-semibold tracking-tight">{item.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>
               </Reveal>
@@ -246,7 +218,7 @@ export default function Home() {
       <section id="capabilities" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:px-8 md:py-32">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           <div>
-            <Reveal as="h2" className="text-3xl font-medium md:text-5xl">
+            <Reveal as="h2" className="text-3xl font-medium tracking-tight md:text-5xl">
               Full cycle, under{" "}
               <em className="font-serif font-medium italic text-accent">one</em>{" "}
               roof.
@@ -254,7 +226,7 @@ export default function Home() {
             <Reveal
               as="p"
               delay={0.1}
-              className="mt-6 text-lg leading-relaxed text-muted-foreground"
+              className="mt-6 text-lg leading-relaxed text-muted-foreground md:text-xl"
             >
               Strategy, design, and engineering work as a single team — so
               nothing gets lost in hand-offs between an agency, a studio, and a
@@ -263,7 +235,7 @@ export default function Home() {
             <Reveal
               as="p"
               delay={0.2}
-              className="mt-4 text-lg leading-relaxed text-muted-foreground"
+              className="mt-4 text-lg leading-relaxed text-muted-foreground md:text-xl"
             >
               You get one partner accountable for the whole product: from the
               first architectural decision to the day it earns its keep in
@@ -275,7 +247,7 @@ export default function Home() {
               <Reveal
                 key={name}
                 delay={0.06 * i}
-                className="flex items-center justify-between rounded-card border border-border bg-card px-6 py-5 text-sm font-medium"
+                className="flex items-center justify-between rounded-card border border-border bg-card px-6 py-5 text-base font-medium"
               >
                 <span>{name}</span>
                 <span className="text-accent">
@@ -290,7 +262,7 @@ export default function Home() {
       {/* Principles */}
       <section className="border-y border-border bg-card/40">
         <div className="mx-auto max-w-6xl px-6 py-24 md:px-8 md:py-32">
-          <Reveal as="h2" className="text-3xl font-medium md:text-5xl">
+          <Reveal as="h2" className="text-3xl font-medium tracking-tight md:text-5xl">
             Engineering with{" "}
             <em className="font-serif font-medium italic text-accent">
               editorial
@@ -300,7 +272,7 @@ export default function Home() {
           <Reveal
             as="p"
             delay={0.1}
-            className="mt-6 max-w-2xl text-lg text-muted-foreground"
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
           >
             The Lab is run by the same team behind{" "}
             <a
@@ -316,8 +288,8 @@ export default function Home() {
           <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
             {PRINCIPLES.map((item, i) => (
               <Reveal key={item.title} delay={0.08 * i}>
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                <h3 className="text-xl font-semibold tracking-tight">{item.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>
               </Reveal>
@@ -332,7 +304,7 @@ export default function Home() {
           <Reveal as="p" className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
             Ready to start?
           </Reveal>
-          <Reveal as="h2" delay={0.1} className="max-w-3xl text-3xl font-medium md:text-5xl">
+          <Reveal as="h2" delay={0.1} className="max-w-3xl text-3xl font-medium tracking-tight md:text-5xl">
             Let&apos;s build the{" "}
             <em className="font-serif font-medium italic text-accent">first</em>{" "}
             version.
@@ -340,7 +312,7 @@ export default function Home() {
           <Reveal
             as="p"
             delay={0.2}
-            className="mt-6 max-w-2xl text-lg text-muted-foreground"
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
           >
             Tell us about your product. We will tell you what the smallest
             version worth building looks like — and when you can click it.
