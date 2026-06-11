@@ -1,22 +1,21 @@
 import type { Metadata } from "next";
-import { Krub } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const krub = Krub({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-krub",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wetrio.dev"),
-  title: "WeTrio Development Lab",
+  title: "WeTrio Development Lab — IT & SaaS Product Development",
   description:
-    "The engineering arm of WeTrio. We prototype, build, and ship web products, dashboards, and automations — every project live at its own *.wetrio.dev address.",
+    "An IT & SaaS product development agency. We take digital products from idea to production — architecture, design, engineering, and launch.",
   openGraph: {
-    title: "WeTrio Development Lab",
+    title: "WeTrio Development Lab — IT & SaaS Product Development",
     description:
-      "The engineering arm of WeTrio. We prototype, build, and ship web products, dashboards, and automations.",
+      "An IT & SaaS product development agency. We take digital products from idea to production — architecture, design, engineering, and launch.",
     url: "https://wetrio.dev",
     siteName: "WeTrio Development Lab",
     type: "website",
@@ -27,7 +26,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={krub.variable}>
+    <html lang="en" className={inter.variable}>
       <body>{children}</body>
     </html>
   );

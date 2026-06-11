@@ -1,10 +1,12 @@
 # wetrio.dev — WeTrio Development Lab
 
-Landing page for **wetrio.dev**, the public face of the WeTrio Development Lab.
-Built in the visual language of [wetr.io](https://wetr.io) (dark theme): slate-950 background,
-blue accent `#3b82f6`, Krub typography, italic Georgia serif accent words in headlines.
+Landing page for **wetrio.dev** — WeTrio Development Lab, an IT & SaaS product
+development agency. Built in the visual language of [wetr.io](https://wetr.io)
+(dark theme): slate-950 background, blue accent `#3b82f6`, Inter typography,
+italic Georgia serif accent words in headlines.
 
-Test projects continue to live on `*.wetrio.dev` subdomains; this page is the root.
+Test projects continue to live on `*.wetrio.dev` subdomains (not mentioned on
+the landing itself); this page is the root.
 
 ## Stack
 

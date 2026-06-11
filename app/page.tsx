@@ -2,9 +2,14 @@ import { Reveal } from "@/components/Reveal";
 
 const BUILD = [
   {
-    title: "Web products",
+    title: "SaaS platforms",
     description:
-      "Marketing sites, client portals, and full web applications — fast, accessible, and mobile-first by default.",
+      "Multi-tenant products built for subscription businesses: auth, billing, roles, admin — the full platform, not a demo.",
+  },
+  {
+    title: "Web applications",
+    description:
+      "Client portals, marketplaces, and business-critical apps — fast, accessible, and mobile-first by default.",
   },
   {
     title: "Dashboards & internal tools",
@@ -12,69 +17,73 @@ const BUILD = [
       "Analytics dashboards and operations tools that turn scattered data into something a team can actually act on.",
   },
   {
-    title: "Integrations & automation",
+    title: "AI features & automation",
     description:
-      "APIs, webhooks, and workflow automation that connect the tools you already use — ClickUp, Telegram, spreadsheets, CRMs.",
+      "Practical AI built into real workflows: assistants, summarizers, classifiers — measured by usefulness, not hype.",
   },
   {
-    title: "AI-assisted tools",
+    title: "Integrations & APIs",
     description:
-      "Practical AI features built into real workflows: assistants, summarizers, classifiers — measured by usefulness, not hype.",
+      "APIs, webhooks, and workflow automation that connect the tools your business already runs on.",
   },
   {
-    title: "Telegram bots",
+    title: "MVPs & prototypes",
     description:
-      "Bots that handle real operations — notifications, approvals, reporting — where your team already spends its day.",
-  },
-  {
-    title: "Rapid prototypes",
-    description:
-      "A working first version in days, not months. Something you can open, click, and put in front of real users.",
+      "A working first version in weeks, not quarters. Something you can put in front of investors and real users.",
   },
 ];
 
 const PROCESS = [
   {
     step: "01",
-    title: "Brief",
+    title: "Discover",
     description:
-      "We start with the problem, not the feature list. One conversation to define what the first working version must prove.",
+      "We start with the business problem, not the feature list. One focused sprint to define what the product must prove.",
   },
   {
     step: "02",
-    title: "Prototype",
+    title: "Design & prototype",
     description:
-      "Within days the project goes live at its own *.wetrio.dev address. Not a mockup — a real URL you can open and test.",
+      "Architecture and interface take shape together. Within weeks you click a working prototype — not a slide deck.",
   },
   {
     step: "03",
-    title: "Iterate",
+    title: "Build & iterate",
     description:
-      "You click, we ship. Short feedback loops on a live product, so every decision is made against something real.",
+      "Short release cycles on a live product. Every decision is made against real software, with you in the loop.",
   },
   {
     step: "04",
-    title: "Ship",
+    title: "Launch & support",
     description:
-      "When the prototype earns it, we harden it for production — your domain, your infrastructure, your users.",
+      "We harden the product for production and stay on after launch — monitoring, iterations, and new features.",
   },
+];
+
+const CAPABILITIES = [
+  "Product strategy & scoping",
+  "UX/UI & product design",
+  "Full-stack engineering",
+  "Cloud infrastructure & DevOps",
+  "Data, analytics & AI",
+  "Post-launch support",
 ];
 
 const PRINCIPLES = [
   {
-    title: "Live, not slideware",
+    title: "Working software, not slideware",
     description:
-      "Every project in the lab exists as a working deployment from week one. We demo URLs, not decks.",
+      "Every project exists as a live deployment from the first weeks. We demo URLs, not decks.",
   },
   {
     title: "Design discipline included",
     description:
-      "The lab shares one design language with WeTrio Agency. Engineering speed never excuses a careless interface.",
+      "The Lab shares one design language with WeTrio Agency. Engineering speed never excuses a careless interface.",
   },
   {
-    title: "Small surface, sharp focus",
+    title: "Senior, small, accountable",
     description:
-      "We build the smallest thing that answers the question, then grow it. No six-month roadmaps before the first click.",
+      "A compact team that owns the result end to end. No hand-offs between departments, no six-month roadmaps before the first click.",
   },
 ];
 
@@ -111,10 +120,10 @@ export default function Home() {
               What we build
             </a>
             <a href="#process" className="transition-colors hover:text-foreground">
-              How it works
+              How we work
             </a>
-            <a href="#lab" className="transition-colors hover:text-foreground">
-              The lab
+            <a href="#capabilities" className="transition-colors hover:text-foreground">
+              Capabilities
             </a>
             <a href="#contact" className="transition-colors hover:text-foreground">
               Contact
@@ -141,20 +150,17 @@ export default function Home() {
           delay={0.15}
           className="max-w-4xl text-4xl font-medium leading-[1.1] md:text-6xl lg:text-7xl"
         >
-          Where ideas become{" "}
-          <em className="font-serif font-medium italic text-accent">working</em>{" "}
-          products.
+          IT & SaaS products, built to{" "}
+          <em className="font-serif font-medium italic text-accent">ship.</em>
         </Reveal>
         <Reveal
           as="p"
           delay={0.3}
           className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl"
         >
-          The engineering arm of WeTrio. We design, prototype, and ship web
-          products, dashboards, and automations — fast, and in the open. Every
-          project lives at its own{" "}
-          <span className="text-foreground">*.wetrio.dev</span> address from
-          the first week.
+          WeTrio Development Lab is a product development agency. We take
+          digital products from idea to production — architecture, design,
+          engineering, and launch — as one accountable team.
         </Reveal>
         <Reveal delay={0.45} className="mt-12 flex flex-wrap items-center gap-4">
           <a
@@ -175,9 +181,9 @@ export default function Home() {
       {/* What we build */}
       <section id="build" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:px-8 md:py-32">
         <Reveal as="h2" className="text-3xl font-medium md:text-5xl">
-          Built in the lab,{" "}
-          <em className="font-serif font-medium italic text-accent">used</em> in
-          the real world.
+          Products people{" "}
+          <em className="font-serif font-medium italic text-accent">use,</em>{" "}
+          not just launch.
         </Reveal>
         <Reveal
           as="p"
@@ -207,16 +213,18 @@ export default function Home() {
       <section id="process" className="border-y border-border bg-card/40">
         <div className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:px-8 md:py-32">
           <Reveal as="h2" className="text-3xl font-medium md:text-5xl">
-            From brief to live URL in{" "}
-            <em className="font-serif font-medium italic text-accent">days.</em>
+            From first brief to{" "}
+            <em className="font-serif font-medium italic text-accent">
+              production.
+            </em>
           </Reveal>
           <Reveal
             as="p"
             delay={0.1}
             className="mt-6 max-w-2xl text-lg text-muted-foreground"
           >
-            The lab runs on short loops and live software. Here is the whole
-            process — no hidden phases.
+            Short loops, live software, no hidden phases. Here is the whole
+            process.
           </Reveal>
           <div className="mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-card border border-border bg-border md:grid-cols-4">
             {PROCESS.map((item, i) => (
@@ -234,59 +242,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* The lab / subdomains */}
-      <section id="lab" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:px-8 md:py-32">
+      {/* Capabilities */}
+      <section id="capabilities" className="mx-auto max-w-6xl scroll-mt-24 px-6 py-24 md:px-8 md:py-32">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           <div>
             <Reveal as="h2" className="text-3xl font-medium md:text-5xl">
-              One domain.{" "}
-              <em className="font-serif font-medium italic text-accent">
-                Many
-              </em>{" "}
-              experiments.
+              Full cycle, under{" "}
+              <em className="font-serif font-medium italic text-accent">one</em>{" "}
+              roof.
             </Reveal>
             <Reveal
               as="p"
               delay={0.1}
               className="mt-6 text-lg leading-relaxed text-muted-foreground"
             >
-              wetrio.dev is our proving ground. Every prototype, internal tool,
-              and client experiment gets its own subdomain — a real deployment
-              with real data flows, not a staging server nobody can reach.
+              Strategy, design, and engineering work as a single team — so
+              nothing gets lost in hand-offs between an agency, a studio, and a
+              contractor.
             </Reveal>
             <Reveal
               as="p"
               delay={0.2}
               className="mt-4 text-lg leading-relaxed text-muted-foreground"
             >
-              When a project proves itself here, it graduates to production.
-              Until then, it lives where we can break it safely.
+              You get one partner accountable for the whole product: from the
+              first architectural decision to the day it earns its keep in
+              production.
             </Reveal>
           </div>
           <div className="flex flex-col justify-center gap-4">
-            {["project", "dashboard", "bot-console", "your-idea"].map(
-              (name, i) => (
-                <Reveal
-                  key={name}
-                  delay={0.1 * i}
-                  className="flex items-center justify-between rounded-card border border-border bg-card px-6 py-5 font-mono text-sm"
-                >
-                  <span>
-                    <span className="text-accent">{name}</span>
-                    <span className="text-muted-foreground">.wetrio.dev</span>
-                  </span>
-                  <span
-                    className={
-                      name === "your-idea"
-                        ? "text-xs uppercase tracking-wider text-accent"
-                        : "text-xs uppercase tracking-wider text-muted-foreground"
-                    }
-                  >
-                    {name === "your-idea" ? "next" : "live"}
-                  </span>
-                </Reveal>
-              )
-            )}
+            {CAPABILITIES.map((name, i) => (
+              <Reveal
+                key={name}
+                delay={0.06 * i}
+                className="flex items-center justify-between rounded-card border border-border bg-card px-6 py-5 text-sm font-medium"
+              >
+                <span>{name}</span>
+                <span className="text-accent">
+                  <ArrowIcon />
+                </span>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -306,7 +302,7 @@ export default function Home() {
             delay={0.1}
             className="mt-6 max-w-2xl text-lg text-muted-foreground"
           >
-            The lab is run by the same team behind{" "}
+            The Lab is run by the same team behind{" "}
             <a
               href="https://wetr.io"
               target="_blank"
@@ -346,8 +342,8 @@ export default function Home() {
             delay={0.2}
             className="mt-6 max-w-2xl text-lg text-muted-foreground"
           >
-            Tell us what you are trying to prove. We will tell you what the
-            smallest working version looks like — and when you can click it.
+            Tell us about your product. We will tell you what the smallest
+            version worth building looks like — and when you can click it.
           </Reveal>
           <Reveal delay={0.3} className="mt-10 flex flex-wrap items-center gap-4">
             <a
@@ -380,14 +376,14 @@ export default function Home() {
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center md:px-8">
           <p>
-            WeTrio Development Lab — the engineering arm of{" "}
+            WeTrio Development Lab — IT & SaaS product development by{" "}
             <a
               href="https://wetr.io"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground transition-colors hover:text-accent"
             >
-              WeTrio Agency
+              WeTrio
             </a>
             .
           </p>
