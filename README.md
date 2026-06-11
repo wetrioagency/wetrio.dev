@@ -10,10 +10,11 @@ the landing itself); this page is the root.
 
 ## Stack
 
-- Next.js 16 (App Router, **static export** — `output: "export"`)
+- Next.js 16 (App Router, standard server build — runs as `next start`)
 - Tailwind CSS v4 (design tokens as CSS variables in `app/globals.css`)
 - No runtime dependencies beyond React; scroll animations via a small
   IntersectionObserver wrapper (`components/Reveal.tsx`)
+- No environment variables required (static landing, no backend)
 
 ## Develop
 
@@ -22,23 +23,23 @@ pnpm install
 pnpm dev
 ```
 
-## Deploy
+## Deploy (Coolify, like the other *.wetrio.dev projects)
+
+Hosted on the WeTrio Hetzner server via **Coolify**; DNS for `wetrio.dev`
+is on **Cloudflare**. Coolify auto-detects Next.js (Nixpacks) and runs the
+app as a Node server — no Dockerfile needed, matching `wtr-hub` and the other
+projects.
+
+- **Source:** GitHub repo `wetrioagency/wetrio.dev`, branch `main`
+- **Build pack:** Nixpacks (auto-detected) → `pnpm install && pnpm build`
+- **Start:** `pnpm start` (Next.js server, port 3000)
+- **Domain:** `wetrio.dev` (Cloudflare A/CNAME → Hetzner; Coolify/Traefik
+  terminates TLS)
+- **Auto-deploy:** webhook on push to `main`
 
 ```bash
-pnpm build
-```
-
-Static site is emitted to `out/` — copy it to the server and point nginx at it:
-
-```nginx
-server {
-    server_name wetrio.dev;
-    root /var/www/wetrio.dev;
-    index index.html;
-    location / {
-        try_files $uri $uri/index.html =404;
-    }
-}
+# local production check
+pnpm build && pnpm start
 ```
 
 ## Design tokens (from wetr.io dark theme)
