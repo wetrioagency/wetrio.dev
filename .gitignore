@@ -4,3 +4,9 @@ node_modules/
 next-env.d.ts
 .DS_Store
 .env*
+
+# pnpm 11 regenerates this locally to gate build scripts (sharp/unrs-resolver).
+# It must NOT be committed: the server runs pnpm 9, which treats the file as a
+# workspace declaration and fails with "packages field missing or empty".
+# Build-script approval for the server lives in package.json (pnpm.onlyBuiltDependencies).
+pnpm-workspace.yaml
