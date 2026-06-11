@@ -123,8 +123,11 @@ export default function Home() {
           delay={0.15}
           className="max-w-4xl text-4xl font-medium leading-[1.1] tracking-tight md:text-6xl lg:text-7xl"
         >
-          IT & SaaS products, built to{" "}
-          <em className="accent-italic text-accent">ship.</em>
+          IT & SaaS products,
+          <br />
+          <span className="whitespace-nowrap">
+            built to <em className="accent-italic text-accent">ship.</em>
+          </span>
         </Reveal>
         <Reveal
           as="p"
